@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+        public class Main {
+            public static void main(String[] args) {
+                Scanner s = new Scanner(System.in);
+
+                // heading/introduction for customers to know what not to do when using program
+                System.out.println("-----------------------------------------------------------------");
+                System.out.println("| Note! Do NOT use any symbols when inputting data! (no $ or %) |");
+                System.out.println("-----------------------------------------------------------------");
+
+                // primary values
+                System.out.print("Enter your Bill($): ");
+                double bill = Double.valueOf(s.nextLine());
+                System.out.print("Tip Percent: ");
+                int TipPer = s.nextInt();
+                System.out.print("Number of People: ");
+                int people = s.nextInt();
+
+                // secondary (values i get by doing calculations) values
+                double totaltip = bill * (double)(TipPer / 10);
+                double totalbill = totaltip + bill;
+                double tip = totaltip / people;
+                double billper = totalbill / people;
+
+                // Receipt
+                System.out.println();
+                System.out.println("-----------------------------------");
+                System.out.println("| Total Tip Amount: " + totaltip);
+                System.out.println("-----------------------------------");
+                System.out.println("| Total Bill Cost: " + totalbill);
+                System.out.println("-----------------------------------");
+                System.out.println("| Tip per person: " + tip);
+                System.out.println("-----------------------------------");
+                System.out.println("| Total bill per person: " + billper + "    |");
+                System.out.println("-----------------------------------");
+            }
+        }
