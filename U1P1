@@ -18,7 +18,7 @@ import java.util.Scanner;
                 int people = s.nextInt();
 
                 // secondary (values i get by doing calculations) values
-                double totaltip = bill * (double)(TipPer / 10);
+                double totaltip = bill * (TipPer / 100.0);
                 double totalbill = totaltip + bill;
                 double tip = totaltip / people;
                 double billper = totalbill / people;
@@ -26,13 +26,13 @@ import java.util.Scanner;
                 // Receipt
                 System.out.println();
                 System.out.println("-----------------------------------");
-                System.out.println("| Total Tip Amount: " + totaltip);
+                System.out.printf("| Total Tip Amount: $%.2f         | \n", totaltip);
                 System.out.println("-----------------------------------");
-                System.out.println("| Total Bill Cost: " + totalbill);
+                System.out.printf("| Total Bill Cost: $%.2f         | \n", totalbill);
                 System.out.println("-----------------------------------");
-                System.out.println("| Tip per person: " + tip);
+                System.out.printf("| Tip per person: $%.2f           | \n", tip);
                 System.out.println("-----------------------------------");
-                System.out.println("| Total bill per person: " + billper + "    |");
+                System.out.printf("| Total bill per person: $%.2f    | \n", billper);
                 System.out.println("-----------------------------------");
             }
         }
